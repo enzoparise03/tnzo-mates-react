@@ -1,0 +1,112 @@
+.productos-page {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+.filtros {
+    width: 215px;
+    background: #ffffff;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    padding-bottom: 14px;
+}
+
+.filtros h3 {
+    color: var(--color-dark);
+    margin-bottom: 9px;
+    font-family: var(--font-heading);
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 7px;
+    font-size: 20px;
+}
+
+.filtros hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0 20px;
+}
+
+.filtro p {
+    font-weight: bold;
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    color: var(--color-dark);
+    padding-left: 7px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.filtro ul {
+    list-style: none;
+    padding: 0 7px;
+    margin-bottom: 20px;
+}
+
+.filtro li button {
+    background: none;
+    border: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 14px;
+    transition: 0.1s;
+    padding: 0;
+}
+
+.filtro li button:hover {
+    color: var(--color-accent);
+}
+
+.filtro-activo {
+    color: var(--color-accent) !important;
+    font-weight: bold;
+}
+
+.btn-limpiar {
+    margin: 0 7px;
+    padding: 6px 10px;
+    border: 1px solid var(--color-accent);
+    background: none;
+    color: var(--color-accent);
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: var(--font-body);
+}
+
+.productos-grid {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .productos-page {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .filtros {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filtros {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

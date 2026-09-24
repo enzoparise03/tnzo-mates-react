@@ -1,0 +1,97 @@
+header {
+    background: var(--color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 5px 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 10px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    line-height: 0.9;
+    color: #5F422C;
+}
+
+.logo-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #5F422C;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu a {
+    font-family: var(--font-heading);
+    text-decoration: none;
+    color: #333;
+    font-size: 25px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+}
+
+.iconosNav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.buscadorNav {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(58, 57, 57, 0.467);
+    background: transparent;
+}
+
+/* =========================================
+   RESPONSIVO (CELULARES)
+   ========================================= */
+@media (max-width: 768px) {
+    header {
+        position: static;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+    }
+}

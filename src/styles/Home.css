@@ -1,0 +1,140 @@
+/* =========================================
+   1. SECCIÓN HERO (INICIO)
+   ========================================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 580px;
+    background-image: url('/assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: var(--font-body);
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+    text-align: left;
+}
+
+.hero-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 60px;
+    color: #f6ece0;
+    line-height: 1.05;
+    margin-bottom: 18px;
+}
+
+.hero-divider {
+    display: block;
+    color: var(--color-primary);
+    font-size: 15px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.hero-text p {
+    font-size: 17px;
+    color: #f0e6da;
+    line-height: 1.6;
+    max-width: 460px;
+    margin-bottom: 32px;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 13px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #7a4e30;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   2. SECCIÓN DE TARJETAS (CATEGORÍAS)
+   ========================================= */
+.seccion-tarjetas {
+    text-align: center;
+    padding: 12px 20px;
+}
+
+.span-categoria {
+    font-family: var(--font-body);
+    letter-spacing: 1px;
+}
+
+.h2-categoria {
+    font-family: var(--font-heading);
+    color: #533622;
+    letter-spacing: 2px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.grid-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+/* =========================================
+   5. DISEÑO RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 24px;
+        min-height: 420px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
