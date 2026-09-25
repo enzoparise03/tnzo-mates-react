@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import productos from '../data/productos';
-import Beneficios from './Beneficios';
+import Beneficios from '../components/Beneficios';
 import '../styles/ProductoDetalle.css';
 
 function ProductoDetalle() {

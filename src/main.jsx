@@ -5,7 +5,7 @@ import './index.css'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import Productos from './pages/Productos.jsx'
-import ProductoDetalle from './components/ProductoDetalle.jsx'
+import ProductoDetalle from './pages/ProductoDetalle.jsx'
 
 
 const router = createBrowserRouter([

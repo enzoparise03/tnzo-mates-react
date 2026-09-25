@@ -2,14 +2,14 @@ import { useState } from 'react';
 import '../styles/Gallery.css';
 
 const fotos = [
-    { src: "/assets/bolsoBoca.jpeg", alt: "Funda de crochet para termo" },
-    { src: "/assets/bolsoFiesta.jpg", alt: "Posamate tejido a crochet" },
-    { src: "/assets/bolsoFiestaB&N.jpeg", alt: "Bolso matero a crochet" },
-    { src: "/assets/bolsoMediaManija.jpeg", alt: "Detalle de tejido crochet" },
-    { src: "/assets/bolsoMarron.jpeg", alt: "Amigurumi matero" },
-    { src: "/assets/BolsoRiver.jpeg", alt: "Funda para mate crochet" },
-    { src: "/assets/Canasta1.jpeg", alt: "Artesanía en crochet 1" },
-    { src: "/assets/CanastaMediana.jpg", alt: "Artesanía en crochet 2" },
+    { src: "/assets/bolsoBoca.jpeg", alt: "Bolso de fiesta en crochet" },
+    { src: "/assets/bolsoFiesta.jpg", alt: "Bolso de fiesta en crochet" },
+    { src: "/assets/bolsoFiestaB&N.jpeg", alt: "cartera a crochet" },
+    { src: "/assets/bolsoMediaManija.jpeg", alt: "Cartera crochet" },
+    { src: "/assets/bolsoMarron.jpeg", alt: "Cartera crochet" },
+    { src: "/assets/BolsoRiver.jpeg", alt: "Matera a crochet" },
+    { src: "/assets/Canasta1.jpeg", alt: "Matera a crochet" },
+    { src: "/assets/CanastaMediana.jpg", alt: "canasta a crochet" },
 ];
 
 function Gallery() {
