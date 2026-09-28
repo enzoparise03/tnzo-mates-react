@@ -10,7 +10,8 @@ const categorias = [
     { id: "camioneros", nombre: "Camioneros" },
     { id: "bombillas", nombre: "Bombillas y bombillones" },
     { id: "termosYCanastas", nombre: "Termos y Canastas" },
-    { id: "crochet", nombre: "Crochet" },
+    { id: "crochet", nombre: "Crochet y Polipropileno" },
+
 ];
 
 const materiales = [
