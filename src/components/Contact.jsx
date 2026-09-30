@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../styles/Contact.css';
 
+// Valores vacíos, para arrancar el formulario y para resetearlo después
 const valoresIniciales = {
     nombre: "",
     email: "",
@@ -10,9 +11,11 @@ const valoresIniciales = {
     mensaje: "",
 };
 
+// Formulario de contacto controlado: un solo estado guarda los 6 campos juntos
 function Contact() {
     const [form, setForm] = useState(valoresIniciales);
 
+    // Se ejecuta en cada input al escribir o elegir una opción.
     const handleChange = (e) => {
         const { name, value } = e.target;
         console.log(`Campo modificado → ${name}: ${value}`);
@@ -23,7 +26,7 @@ function Contact() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault();  // evita que la página se recargue
         console.log("Formulario enviado:", form);
         setForm(valoresIniciales);
     };

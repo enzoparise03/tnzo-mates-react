@@ -4,11 +4,14 @@ import productos from '../data/productos';
 import Beneficios from '../components/Beneficios';
 import '../styles/ProductoDetalle.css';
 
+
+// Página de un producto individual. Una sola página sirve para los 18 productos.
 function ProductoDetalle() {
-    const { id } = useParams();
-    const producto = productos.find((p) => p.id === id);
+    const { id } = useParams(); // id leído de la URL, ej: /productos/torpedoAlpaca
+    const producto = productos.find((p) => p.id === id); // busca ESE producto en la lista completa
     const [cantidad, setCantidad] = useState(1);
 
+    // Si escriben una URL con un id que no existe, find() no encuentra nada
     if (!producto) {
         return (
             <div className="container main-content">
@@ -20,7 +23,7 @@ function ProductoDetalle() {
 
     const restarCantidad = () => {
         if (cantidad > 1) {
-            setCantidad(cantidad - 1);
+            setCantidad(cantidad - 1); // no deja bajar de 1
         }
     };
 

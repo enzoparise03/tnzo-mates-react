@@ -1,5 +1,6 @@
 import '../styles/Beneficios.css';
 
+// Franja de los 3 íconos de confianza. Se usa en Home y en ProductoDetalle
 function Beneficios({ variante = "home" }) {
     const claseSeccion = variante === "prod" ? "beneficios-prod" : "beneficios";
     const claseItem = variante === "prod" ? "beneficio-item-prod" : "beneficio-item";

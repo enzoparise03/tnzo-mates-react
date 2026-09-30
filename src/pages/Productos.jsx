@@ -4,6 +4,7 @@ import productos from '../data/productos';
 import ProductCard from '../components/ProductCard';
 import '../styles/Productos.css';
 
+// Listas fijas para dibujar los botones del sidebar (id = valor real, nombre = texto visible)
 const categorias = [
     { id: "imperiales", nombre: "Imperiales" },
     { id: "torpedos", nombre: "Torpedos" },
@@ -14,16 +15,22 @@ const categorias = [
 
 ];
 
+// Catálogo completo, con filtro por categoría y material (combinables entre sí)
 const materiales = [
     { id: "calabaza", nombre: "Calabaza" },
     { id: "algarrobo", nombre: "Algarrobo" },
 ];
 
+// Catálogo completo, con filtro por categoría y material (combinables entre sí)
 function Productos() {
+// Si se entra desde una tarjeta del Home, la categoría ya viene en la URL
     const { categoria: categoriaDeLaUrl } = useParams();
     const [categoriaActiva, setCategoriaActiva] = useState(categoriaDeLaUrl || null);
     const [materialActivo, setMaterialActivo] = useState(null);
 
+
+    // Recorre los 18 productos y deja solo los que cumplen los filtros activos
+    // Si un filtro está en null, esa condición se ignora 
     const productosFiltrados = productos.filter((producto) => {
         const pasaCategoria = !categoriaActiva || producto.categoria === categoriaActiva;
         const pasaMaterial = !materialActivo || producto.material === materialActivo;
@@ -39,6 +46,7 @@ function Productos() {
                 <div className="filtro">
                     <p>CATEGORIAS</p>
                     <ul>
+                        {/* Un botón por categoría, generado con .map() en vez de escribir los 6 a mano */}
                         {categorias.map((cat) => (
                             <li key={cat.id}>
                                 <button
@@ -71,7 +79,8 @@ function Productos() {
                 </div>
 
                 <hr />
-
+                
+                {/* Solo aparece si hay algún filtro activo */}
                 {(categoriaActiva || materialActivo) && (
                     <button className="btn-limpiar" onClick={() => { setCategoriaActiva(null); setMaterialActivo(null); }}>
                         Limpiar filtros

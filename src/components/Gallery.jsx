@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../styles/Gallery.css';
 
+// Lista fija de fotos
 const fotos = [
     { src: "/assets/bolsoBoca.jpeg", alt: "Bolso de fiesta en crochet" },
     { src: "/assets/bolsoFiesta.jpg", alt: "Bolso de fiesta en crochet" },
@@ -12,7 +13,9 @@ const fotos = [
     { src: "/assets/CanastaMediana.jpg", alt: "canasta a crochet" },
 ];
 
+// Galería con foto ampliada (lightbox) al hacer clic
 function Gallery() {
+     // Guarda la foto clickeada. null = ninguna agrandada
     const [fotoActiva, setFotoActiva] = useState(null);
 
     return (
@@ -20,6 +23,7 @@ function Gallery() {
             <h2>Nuestros Trabajos en Crochet</h2>
 
             <div className="galeria-fotos">
+                {/* .map() dibuja una foto por cada elemento del array, sin repetir código */}
                 {fotos.map((foto) => (
                     <div
                         key={foto.src}
@@ -35,6 +39,7 @@ function Gallery() {
                 ))}
             </div>
 
+            {/* Solo se muestra si hay una foto activa guardada en el estado */}
             {fotoActiva && (
                 <div className="galeria-lightbox" onClick={() => setFotoActiva(null)}>
                     <button

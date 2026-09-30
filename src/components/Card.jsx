@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/Card.css';
 
+// Tarjeta reutilizable para las categorías del Home. Recibe todo por props.
 function Card({ imagen, titulo, texto, link }) {
     return (
         <article className="card">

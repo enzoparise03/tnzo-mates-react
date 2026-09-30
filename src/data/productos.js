@@ -1,3 +1,5 @@
+// Lista de todos los productos del catálogo. Es la única fuente de datos:
+// Productos.jsx la usa para el catálogo/filtros, ProductoDetalle.jsx para la ficha de cada uno.
 const productos = [
     {
         id: "torpedoAlpaca", nombre: "Torpedo de alpaca cincelado", imagen: "/assets/Torpedo de alpaca cincelado.jpg", precio: 26000, categoria: "torpedos", material: "calabaza",

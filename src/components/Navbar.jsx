@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
+// Barra de navegación. Se muestra en todas las páginas
 function Navbar() {
     return (
         <header>
@@ -13,6 +14,7 @@ function Navbar() {
                     </div>
                 </div>
 
+                {/*navega sin recargar la página */}
                 <ul className="menu">
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/productos">Productos</Link></li>
@@ -20,6 +22,7 @@ function Navbar() {
                 </ul>
 
                 <div className="iconosNav">
+                    {/* Buscador decorativo, sin lógica */}
                     <input type="search" placeholder="Buscar productos" className="buscadorNav" />
                     <span className="icon"><i className="fa-solid fa-user"></i></span>
                     <span className="icon"><i className="fa-solid fa-cart-shopping"></i></span>

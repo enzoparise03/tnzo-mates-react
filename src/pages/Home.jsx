@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import Beneficios from '../components/Beneficios';
 
+// Página de inicio. No tiene lógica propia: junta varios componentes, uno abajo del otro
 function Home() {
     return (
         <>
