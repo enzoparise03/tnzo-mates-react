@@ -1,6 +1,6 @@
 # TNZO Mates & Crochet — Migración a React
 
-Trabajo Práctico Final — migración de un e-commerce propio, originalmente hecho en HTML y CSS estático, a una aplicación React componentizada con Vite y React Router.
+Trabajo Práctico Final (PF.A) — migración de un e-commerce propio, originalmente hecho en HTML y CSS estático, a una aplicación React componentizada con Vite y React Router.
 
 🔗 **Demo en vivo:** https://tnzo-mates-react.vercel.app
 
@@ -9,11 +9,11 @@ Trabajo Práctico Final — migración de un e-commerce propio, originalmente he
 - React
 - Vite
 - React Router v6
-- CSS
+- CSS 
 
 ## Funcionalidades
 
-- Catálogo de productos con filtro por categoría y por material (combinables entre sí)
+- Catálogo de 19 productos con filtro por categoría y por material (combinables entre sí)
 - Ficha de producto individual con ruta dinámica (`/productos/:id`)
 - Formulario de contacto controlado con `useState` (captura de datos, validación, reseteo)
 - Galería de fotos con vista ampliada (lightbox)
@@ -52,10 +52,11 @@ Trabajo Práctico Final — migración de un e-commerce propio, originalmente he
 src/
 ├── components/     → Navbar, Footer, Layout, Card, ProductCard, Gallery, Contact, Beneficios
 ├── pages/          → Home, Productos, ProductoDetalle
-├── data/           → productos.js (datos de los 18 productos)
+├── data/           → productos.js (datos de los productos)
 ├── styles/         → un archivo CSS por componente/página
 ├── hooks/          → useScrollToHash.js (scroll automático al navegar a #contacto)
-└── main.jsx        → configuración de rutas (React Router)
+├── App.jsx         → configuración de rutas (React Router)
+└── main.jsx        → punto de entrada, conecta React con el HTML
 
 public/
 └── assets/         → imágenes del sitio
